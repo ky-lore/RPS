@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    var score = 0;
+    for (var i = 0; i < 10; i++) {
+      var input = prompt(`Enter your choice!`)
+      var rng = Math.random()
+      if (rng < 0.34) {
+        computerChoice = "rock";
+      } else if (rng <= 0.67) {
+        computerChoice = "paper";
+      } else {
+        computerChoice = "scissors";
+      }
+
+      // switch (rng) {
+      //   case rng < 0.33:
+      //     var computerChoice = "rock";
+      //     break;
+      //   case rng <= 0.67:
+      //     var computerChoice = "paper";
+      //     break;
+      //   case rng <= 1:
+      //     var computerChoice = "scissors";
+      //     break;
+      // }
+
+      // User inputs rock
+      if (input == "rock" & computerChoice == "scissors") {
+        alert(`Computer played scissors. You won!`)
+        console.log(`Win`)
+        score++;
+      } 
+      
+      else if (input == "rock" & computerChoice == "paper") {
+        alert(`Computer played paper. You lose!`)
+        console.log(`Lose`)
+      } 
+      
+      else if (input == "rock" & computerChoice == "rock") {
+        alert(`Computer played rock. Tie!`)
+        console.log(`Tie`)
+      } 
+      
+      // User inputs scissors
+      else if (input == "scissors" & computerChoice == "paper") {
+        alert(`Computer played paper. You won!`)
+        console.log(`Win`)
+        score++;
+      } 
+      
+      else if (input == "scissors" & computerChoice == "rock") {
+        alert(`Computer played rock. You lose!`)
+        console.log(`Lose`)
+      } 
+      
+      else if (input == "scissors" & computerChoice == "scissors") {
+        alert(`Computer played scissors. Tie!`)
+        console.log(`Tie`)
+      } 
+      
+      // User inputs paper
+      else if (input == "paper" & computerChoice == "rock") {
+        alert(`Computer played rock. You won!`)
+        score++;
+      } 
+      
+      else if (input == "paper" & computerChoice == "scissors") {
+        alert(`Computer played scissors. You lose!`)
+        console.log(`Lose`)
+      } 
+      
+      else if (input == "paper" & computerChoice == "paper") {
+        alert(`Computer played paper. Tie!`)
+        console.log(`Tie`)
+      }
+    } 
+
+    alert("You won a total of " + score + " times!");
+
+  </script>
+
+</body>
+
+</html>
